@@ -1,0 +1,12 @@
+{
+	"name": "vue-snapshot-serializer",
+	"version": "0.0.0",
+	"description": "vuejs snapshot serializer. with props, data and computed support",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Sebastian Plaza <sebastianplaza@gmail.com>",
+	"license": "MIT"
+}
