@@ -5,7 +5,8 @@ vuejs snapshot serializer. with props, data and computed support
 ## How to
 
 ```sh
-npm add -D vue-snapshot-serializer
+# prettier is a requirement
+npm add -D vue-snapshot-serializer prettier
 ```
 
 In your jest/vitest config
