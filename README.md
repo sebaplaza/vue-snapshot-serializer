@@ -65,6 +65,5 @@ This is the description of my test`] = `
     fooValue: 444
   }
 }
-}
 </pre>
 ```

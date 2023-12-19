@@ -2,17 +2,24 @@
 	"name": "vue-snapshot-serializer",
 	"version": "0.1.1",
 	"description": "vuejs snapshot serializer. with props, data and computed support",
-	"main": "index.js",
+	"main": "src/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "vitest",
+		"coverage": "vitest --coverage",
+		"prepublish": "pnpm coverage"
 	},
 	"keywords": [],
 	"author": "Sebastian Plaza <sebastianplaza@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
-		"prettier": "^2.7.1"
+		"@vitest/coverage-v8": "^1.0.4",
+		"prettier": "^3.1.1",
+		"vitest": "^1.0.4"
 	},
 	"peerDdependencies": {
-		"prettier": "*"
+		"prettier": "3.x"
+	},
+	"dependencies": {
+		"fast-safe-stringify": "^2.1.1"
 	}
 }
