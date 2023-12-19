@@ -1,6 +1,6 @@
 {
   "name": "vue-snapshot-serializer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vuejs snapshot serializer. with props, data and computed support",
   "main": "src/index.js",
   "repository": {
