@@ -1,4 +1,4 @@
-const prettier = require("prettier");
+const prettier = require("@prettier/sync");
 const { default: safeStringify } = require("fast-safe-stringify");
 
 /**
@@ -11,9 +11,9 @@ const stringify = (obj) => safeStringify.stableStringify(obj);
 /**
  * Stringify and prettify an object
  * @param {object} obj any object
- * @returns {Promise<string>} prettified string
+ * @returns {string} prettified string
  */
-const prettyJsonString = async (obj = {}) => {
+const prettyJsonString = (obj = {}) => {
   return prettier.format(stringify(obj), { parser: "json" });
 };
 
@@ -24,7 +24,7 @@ module.exports = {
     const isVue = value?.vm?._isVue;
     return !!isVue;
   },
-  async serialize(value) {
+  serialize(value) {
     const { $props, $data } = value.vm;
     const computedKeys = Object.keys(value.vm._computedWatchers || {});
     const $computed = computedKeys.reduce((prev, curr) => {
@@ -34,11 +34,9 @@ module.exports = {
 
     const html = value.html();
 
-    const [props, data, computed] = await Promise.all([
-      prettyJsonString($props),
-      prettyJsonString($data),
-      prettyJsonString($computed),
-    ]);
+    const props = prettyJsonString($props);
+    const data = prettyJsonString($data);
+    const computed = prettyJsonString($computed);
 
     const content = [
       `<pre id="props-snapshot">${props}</pre>`,
