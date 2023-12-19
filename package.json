@@ -1,25 +1,29 @@
 {
-	"name": "vue-snapshot-serializer",
-	"version": "1.0.0",
-	"description": "vuejs snapshot serializer. with props, data and computed support",
-	"main": "src/index.js",
-	"scripts": {
-		"test": "vitest",
-		"coverage": "vitest --coverage",
-		"prepublish": "pnpm coverage"
-	},
-	"keywords": [],
-	"author": "Sebastian Plaza <sebastianplaza@gmail.com>",
-	"license": "MIT",
-	"devDependencies": {
-		"@vitest/coverage-v8": "^1.0.4",
-		"prettier": "^3.1.1",
-		"vitest": "^1.0.4"
-	},
-	"peerDdependencies": {
-		"prettier": "3.x"
-	},
-	"dependencies": {
-		"fast-safe-stringify": "^2.1.1"
-	}
+  "name": "vue-snapshot-serializer",
+  "version": "1.0.0",
+  "description": "vuejs snapshot serializer. with props, data and computed support",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebaplaza/vue-snapshot-serializer.git"
+  },
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest --coverage",
+    "prepublish": "pnpm coverage"
+  },
+  "keywords": [],
+  "author": "Sebastian Plaza <sebastianplaza@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.0.4",
+    "prettier": "^3.1.1",
+    "vitest": "^1.0.4"
+  },
+  "peerDependencies": {
+    "prettier": "3.x"
+  },
+  "dependencies": {
+    "fast-safe-stringify": "^2.1.1"
+  }
 }
